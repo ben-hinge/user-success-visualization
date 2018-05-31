@@ -45,6 +45,13 @@
     ]
   },
   {
+    "featureType": "administrative.city",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },
+  {
     "featureType": "landscape",
     "elementType": "all",
     "stylers": [

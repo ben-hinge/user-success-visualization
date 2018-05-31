@@ -1,15 +1,32 @@
 import React, { Component } from 'react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
-const demoFancyMapStyles = require("../styles/demoFancyMapStyles.json");
+const aquaticMapStyles = require("../styles/aquaticMapStyles.json");
 
 class Map extends Component {
+
+    constructor(){
+        super();
+        this.state = {
+            lat: 39.8333333,
+            lng: -98.585522
+        };
+        this.updateGeoLocation = this.updateGeoLocation.bind(this);
+    }
+
+    updateGeoLocation(lat, lgn) {
+        this.setState({
+            lat: lat,
+            lgn: lgn
+        });
+    }
+
     render() {
         const HingeGoogleMap = withGoogleMap(props => (
             <GoogleMap
-                defaultCenter = { { lat: 39.8333333, lng: -98.585522 } }
+                defaultCenter = { { lat: this.state.lat, lng: this.state.lng } }
                 defaultZoom = { 5 }
-                defaultOptions= {{ styles: demoFancyMapStyles }}
+                defaultOptions= {{ styles: aquaticMapStyles }}
             >
             </GoogleMap>
         ));
@@ -22,6 +39,6 @@ class Map extends Component {
             </div>
         );
     }
-};
+}
 
 export default Map;
