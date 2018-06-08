@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.4.0",
+    "npm": "^6.1.0",
     "react-dom": "^16.4.0",
+    "react-google-maps": "^9.4.5",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -12,5 +13,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "mobx": "^4.3.1",
+    "mobx-react": "^5.2.2",
+    "mobx-react-devtools": "^5.0.1",
+    "react": "^16.4.0"
   }
 }
